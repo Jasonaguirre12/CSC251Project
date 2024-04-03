@@ -1,9 +1,5 @@
-
 import java.util.Scanner;
 
-/**
- * Represents a policy with various attributes such as policy number or provider name.
- */
 public class Policy {
     private int policyNumber;
     private String providerName;
@@ -14,25 +10,11 @@ public class Policy {
     private double heightInInches;
     private double weightInPounds;
 
-    /**
-     * Default constructor for Policy class.
-     */
+    // Default constructor
     public Policy() {
-        // Default constructor
     }
 
-    /**
-     * Constructor with parameters for Policy class.
-     *
-     * @param policyNumber      The policy number.
-     * @param providerName      The name of the insurance provider.
-     * @param firstName         The first name of the policyholder.
-     * @param lastName          The last name of the policyholder.
-     * @param age               The age of the policyholder.
-     * @param smokingStatus     The smoking status of the policyholder.
-     * @param heightInInches    The height of the policyholder in inches.
-     * @param weightInPounds    The weight of the policyholder in pounds.
-     */
+    // Parameterized constructor for Policy class
     public Policy(int policyNumber, String providerName, String firstName, String lastName,
                   int age, String smokingStatus, double heightInInches, double weightInPounds) {
         this.policyNumber = policyNumber;
@@ -45,164 +27,92 @@ public class Policy {
         this.weightInPounds = weightInPounds;
     }
 
-    /**
-     * Retrieves the policy number.
-     *
-     * @return The policy number.
-     */
+    // Retrieves the policy number
     public int getPolicyNumber() {
         return policyNumber;
     }
 
-    /**
-     * Sets the policy number.
-     *
-     * @param policyNumber The policy number to set.
-     */
+    // Sets the policy number
     public void setPolicyNumber(int policyNumber) {
         this.policyNumber = policyNumber;
     }
 
-    /**
-     * Retrieves the name of the insurance provider.
-     *
-     * @return The name of the insurance provider.
-     */
+    // Retrieves the insurance provider's name
     public String getProviderName() {
         return providerName;
     }
 
-    /**
-     * Sets the name of the insurance provider.
-     *
-     * @param providerName The name of the insurance provider to set.
-     */
+    // Sets the insurance provider's name
     public void setProviderName(String providerName) {
         this.providerName = providerName;
     }
 
-    /**
-     * Retrieves the first name of the policyholder.
-     *
-     * @return The first name of the policyholder.
-     */
+    // Retrieves the policyholder's first name
     public String getFirstName() {
         return firstName;
     }
 
-    /**
-     * Sets the first name of the policyholder.
-     *
-     * @param firstName The first name of the policyholder to set.
-     */
+    // Sets the policyholder's first name
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    /**
-     * Retrieves the last name of the policyholder.
-     *
-     * @return The last name of the policyholder.
-     */
+    // Retrieves the policyholder's last name
     public String getLastName() {
         return lastName;
     }
 
-    /**
-     * Sets the last name of the policyholder.
-     *
-     * @param lastName The last name of the policyholder to set.
-     */
+    // Sets the policyholder's last name
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    /**
-     * Retrieves the age of the policyholder.
-     *
-     * @return The age of the policyholder.
-     */
+    // Retrieves the policyholder's age
     public int getAge() {
         return age;
     }
 
-    /**
-     * Sets the age of the policyholder.
-     *
-     * @param age The age of the policyholder to set.
-     */
+    // Sets the policyholder's age
     public void setAge(int age) {
         this.age = age;
     }
 
-    /**
-     * Retrieves the smoking status of the policyholder.
-     *
-     * @return The smoking status of the policyholder.
-     */
+    // Retrieves the policyholder's smoking status
     public String getSmokingStatus() {
         return smokingStatus;
     }
 
-    /**
-     * Sets the smoking status of the policyholder.
-     *
-     * @param smokingStatus The smoking status of the policyholder to set.
-     */
+    // Sets the policyholder's smoking status
     public void setSmokingStatus(String smokingStatus) {
         this.smokingStatus = smokingStatus;
     }
 
-    /**
-     * Retrieves the height of the policyholder in inches.
-     *
-     * @return The height of the policyholder in inches.
-     */
+    // Retrieves the policyholder's height in inches
     public double getHeightInInches() {
         return heightInInches;
     }
 
-    /**
-     * Sets the height of the policyholder in inches.
-     *
-     * @param heightInInches The height of the policyholder in inches to set.
-     */
+    // Sets the policyholder's height in inches
     public void setHeightInInches(double heightInInches) {
         this.heightInInches = heightInInches;
     }
 
-    /**
-     * Retrieves the weight of the policyholder in pounds.
-     *
-     * @return The weight of the policyholder in pounds.
-     */
+    // Retrieves the policyholder's weight in pounds
     public double getWeightInPounds() {
         return weightInPounds;
     }
 
-    /**
-     * Sets the weight of the policyholder in pounds.
-     *
-     * @param weightInPounds The weight of the policyholder in pounds to set.
-     */
+    // Sets the policyholder's weight in pounds
     public void setWeightInPounds(double weightInPounds) {
         this.weightInPounds = weightInPounds;
     }
 
-    /**
-     * Calculates the Body Mass Index (BMI) of the policyholder.
-     *
-     * @return The BMI of the policyholder.
-     */
+    // Calculates the Body Mass Index (BMI) of the policyholder
     public double calculateBMI() {
         return (weightInPounds * 703) / (heightInInches * heightInInches);
     }
 
-    /**
-     * Calculates the price of the policy based on various factors such as age, smoking status, and BMI.
-     *
-     * @return The price of the policy.
-     */
+    // Calculates the price of the policy based on various factors
     public double calculatePolicyPrice() {
         double baseFee = 600.0;
         double policyPrice = baseFee;
@@ -219,9 +129,7 @@ public class Policy {
         return policyPrice;
     }
 
-    /**
-     * Displays the details of the policy including policy number, provider name, policyholder's information, BMI, and policy price.
-     */
+    // Displays details of the policy including policy number, provider name, policyholder's details, BMI, and policy price
     public void displayPolicyDetails() {
         System.out.println("Policy Number: " + policyNumber);
         System.out.println("Provider Name: " + providerName);
@@ -235,4 +143,40 @@ public class Policy {
         System.out.printf("Policy Price: $%.2f\n", calculatePolicyPrice());
     }
 
-   
+    // Main method to run the program
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter the Policy Number:");
+        int policyNumber = scanner.nextInt();
+
+        System.out.println("Please enter the Provider Name:");
+        String providerName = scanner.next();
+
+        System.out.println("Please enter the Policyholder’s First Name:");
+        String firstName = scanner.next();
+
+        System.out.println("Please enter the Policyholder’s Last Name:");
+        String lastName = scanner.next();
+
+        System.out.println("Please enter the Policyholder’s Age:");
+        int age = scanner.nextInt();
+
+        System.out.println("Please enter the Policyholder’s Smoking Status (smoker/non-smoker):");
+        String smokingStatus = scanner.next();
+
+        System.out.println("Please enter the Policyholder’s Height (in inches):");
+        double heightInInches = scanner.nextDouble();
+
+        System.out.println("Please enter the Policyholder’s Weight (in pounds):");
+        double weightInPounds = scanner.nextDouble();
+
+        Policy policy = new Policy(policyNumber, providerName, firstName, lastName, age,
+                smokingStatus, heightInInches, weightInPounds);
+
+        policy.displayPolicyDetails();
+
+        scanner.close();
+    }
+}
+
